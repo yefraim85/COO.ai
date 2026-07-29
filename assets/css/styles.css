@@ -274,6 +274,75 @@ p { margin: 0; }
 .footer-nav a:hover { color: var(--gold-deep); }
 .footer-legal { font-size: .85rem; color: var(--ink-faint); margin-top: 6px; }
 
+/* ---------- hero epigraph ---------- */
+.epigraph {
+  margin: 52px 0 0; max-width: 640px; padding-left: 22px;
+  border-left: 2px solid var(--gold); font-family: var(--serif);
+  font-style: italic; font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+/* ---------- what it is / is not ---------- */
+.dual { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.dual-col { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 36px 34px 30px; }
+.dual-col h3 { display: flex; align-items: center; gap: 12px; font-size: 1.4rem; margin-bottom: 22px; }
+.dual-mark { width: 26px; height: 26px; border-radius: 50%; flex: none; background-repeat: no-repeat; background-position: center; }
+.dual-mark.is { background: var(--gold-soft); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23a9822f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); }
+.dual-mark.isnt { background: #efe6e2; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='%23a75740' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'/%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3C/svg%3E"); }
+.dual-col ul { list-style: none; margin: 0; padding: 0; }
+.dual-col li { padding: 13px 0; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
+.dual-col li:last-child { border-bottom: 0; }
+.dual-isnt { background: var(--paper-warm); }
+.dual-isnt li { color: var(--ink-faint); }
+
+/* ---------- 6-step flow ---------- */
+.flow-6 { grid-template-columns: repeat(3, 1fr); }
+
+/* ---------- digital twin domains ---------- */
+.domains { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.domain { background: var(--paper); padding: 30px 26px 32px; transition: background .3s var(--ease); }
+.domain:hover { background: var(--paper-warm); }
+.domain h3 { font-size: 1.18rem; margin-bottom: 9px; }
+.domain h3::before { content: ""; display: block; width: 26px; height: 2px; background: var(--gold); margin-bottom: 14px; }
+.domain p { color: var(--ink-soft); font-size: .93rem; }
+.model-note { margin: 40px auto 0; max-width: 72ch; text-align: center; color: var(--ink-soft); font-size: 1.05rem; }
+.model-note strong { color: var(--ink); font-weight: 600; }
+
+/* ---------- platform cards (3-wide, wraps to grid) ---------- */
+.cards-3 { grid-template-columns: repeat(3, 1fr); }
+
+.autonomy-row { margin-top: 44px; }
+
+/* ---------- daily brief ---------- */
+.brief { background: var(--dark); color: var(--on-dark); border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
+.brief-head { display: flex; align-items: center; gap: 10px; padding: 20px 30px; border-bottom: 1px solid rgba(255,255,255,0.09); font-weight: 600; letter-spacing: .01em; color: var(--on-dark); }
+.brief-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px rgba(201,162,75,0.2); }
+.brief-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.brief-group { padding: 30px 32px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.brief-group:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.07); }
+.brief-group:nth-last-child(-n+2) { border-bottom: 0; }
+.brief-label { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; margin-bottom: 16px; display: inline-flex; align-items: center; gap: 8px; }
+.brief-label::before { content: ""; width: 9px; height: 9px; border-radius: 2px; }
+.brief-decide { color: var(--gold); } .brief-decide::before { background: var(--gold); }
+.brief-risk   { color: #e08a6f; } .brief-risk::before { background: #e08a6f; }
+.brief-done   { color: #7fb08a; } .brief-done::before { background: #7fb08a; }
+.brief-wait   { color: var(--on-dark-soft); } .brief-wait::before { background: var(--on-dark-soft); }
+.brief-group ul { list-style: none; margin: 0; padding: 0; }
+.brief-group li { position: relative; padding: 9px 0 9px 18px; color: var(--on-dark-soft); font-size: .96rem; line-height: 1.55; }
+.brief-group li::before { content: ""; position: absolute; left: 0; top: 15px; width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.28); }
+.brief-group li strong { color: var(--on-dark); font-weight: 600; }
+
+/* ---------- roadmap ---------- */
+.roadmap { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
+.phase { position: relative; padding: 40px 22px 10px; }
+.phase::before { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 2px; background: rgba(255,255,255,0.12); }
+.phase::after { content: ""; position: absolute; left: 0; top: -5px; width: 12px; height: 12px; border-radius: 50%; background: var(--dark); border: 2px solid var(--gold); }
+.phase-tag { color: var(--gold); font-family: var(--serif); font-size: .95rem; letter-spacing: .03em; }
+.phase h3 { color: var(--on-dark); font-size: 1.28rem; margin: 12px 0 10px; }
+.phase p { color: var(--on-dark-soft); font-size: .93rem; }
+
+.diff-grid { margin-top: 0; }
+
 /* ---------- reveal animation ---------- */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .reveal.in { opacity: 1; transform: none; }
@@ -285,16 +354,21 @@ p { margin: 0; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 940px) {
-  .flow, .layers, .cards, .constraint-row { grid-template-columns: 1fr 1fr; }
+  .flow, .flow-6, .layers, .cards, .cards-3, .constraint-row { grid-template-columns: 1fr 1fr; }
   .example-layout { grid-template-columns: 1fr; }
   .example-note { position: static; }
+  .domains { grid-template-columns: 1fr 1fr; }
+  .roadmap { grid-template-columns: 1fr 1fr; gap: 8px 0; }
 }
 @media (max-width: 760px) {
   .nav, .header-cta { display: none; }
   .nav-toggle { display: flex; }
   .hero-stats { grid-template-columns: 1fr; gap: 18px; }
   .principles-grid { grid-template-columns: 1fr; }
-  .flow, .layers, .cards, .constraint-row, .checklist { grid-template-columns: 1fr; }
+  .flow, .flow-6, .layers, .cards, .cards-3, .constraint-row, .checklist { grid-template-columns: 1fr; }
+  .dual, .domains, .brief-grid, .roadmap { grid-template-columns: 1fr; }
+  .brief-group:nth-child(odd) { border-right: 0; }
+  .brief-group:nth-last-child(2) { border-bottom: 1px solid rgba(255,255,255,0.07); }
   .checklist { gap: 0; }
   .principle, .card, .flow-step { padding: 30px 26px; }
 }
